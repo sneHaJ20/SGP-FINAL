@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete responsive food website design tutorial </title>
+    <link rel="stylesheet" href="finalstyle.css">
+
+</head>
+<body>
+
+    <header>
+
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>Food-ASH</a>
+    
+        <div id="menu-bar" class="fas fa-bars"></div>
+    
+        <nav class="navbar">
+            <a href="main.html">home</a>
+            <a href="#gallery">gallery</a>
+            <a href="#review">review</a>
+            <a href="#order">Contact</a>
+         <a>   <div class="autocomplete" style="width:300px;">
+                <input id="myInput" type="text" name="myCountry" placeholder="Search Food Item" value="" onchange="openpage()">
+                <script>
+                  function openpage()
+                  {
+                      var x =document.getElementById("myInput").value;
+                      if( x=== "Burger" )
+                      {
+                          window.open("https://www.google.com/search?q=burger&client=opera&hs=11H&sxsrf=ALiCzsZYywz8WNwCNf7gahj4XYP0abpS5w%3A1663344966012&ei=RqEkY7gr4LHj4Q_mt4z4AQ&ved=0ahUKEwi45tnu2pn6AhXg2DgGHeYbAx8Q4dUDCA0&uact=5&oq=burger&gs_lcp=Cgdnd3Mtd2l6EAMyDQguELEDEMcBENEDEEMyBwgAELEDEEMyCwgAEIAEELEDEIMBMgsILhCABBCxAxDUAjILCAAQgAQQsQMQyQMyBQgAEJIDMgUIABCSAzIICAAQgAQQsQMyCwgAEIAEELEDEIMBMggIABCABBCxAzoKCAAQRxDWBBCwAzoHCAAQsAMQQzoNCAAQ5AIQ1gQQsAMYAToSCC4QxwEQ0QMQyAMQsAMQQxgCOgwILhDIAxCwAxBDGAI6BAgjECc6CwguEIAEELEDEIMBOgQIABBDOggIABCxAxCDAToRCC4QgAQQsQMQgwEQxwEQ0QM6BQgAEIAEOg0ILhDHARDRAxDUAhBDOgcILhDUAhBDOgoILhDHARDRAxBDOhEILhCABBCxAxCDARDHARCvAUoECEEYAEoECEYYAVD-BVieDWDiEmgDcAF4AIABrwKIAc0MkgEFMi01LjGYAQCgAQHIARHAAQHaAQYIARABGAnaAQYIAhABGAg&sclient=gws-wiz")
+                      }
+
+                      else if(x=== "Sandwich")
+                      {
+                        window.open("https://www.google.com/search?client=opera&q=sandwich&sourceid=opera&ie=UTF-8&oe=UTF-8");
+                      }
+
+                      else if(x=== "Frankie")
+                      {
+                        window.open("https://www.google.com/search?q=frankie&client=opera&hs=0ec&sxsrf=ALiCzsYXQeg67j4cj_NE0hWFRY6GwZTO0Q%3A1663344822871&ei=tqAkY9TYNMHg4-EP64a-iAc&ved=0ahUKEwjUi7mq2pn6AhVB8DgGHWuDD3EQ4dUDCA0&uact=5&oq=frankie&gs_lcp=Cgdnd3Mtd2l6EAMyBwgAELEDEEMyBAgAEEMyCwguEIAEEMcBEK8BMg4IABCABBCxAxCDARDJAzIFCAAQkgMyBQgAEJIDMgsILhCABBDHARCvATIICAAQgAQQsQMyCAgAEIAEELEDMgUIABCABDoKCAAQRxDWBBCwAzoHCAAQsAMQQzoNCAAQ5AIQ1gQQsAMYAToPCC4Q1AIQyAMQsAMQQxgCOhIILhDHARDRAxDIAxCwAxBDGAI6DAguEMgDELADEEMYAjoECCMQJzoRCC4QgAQQsQMQgwEQxwEQ0QM6CwgAEIAEELEDEIMBOgsILhCABBCxAxDUAjoECC4QQzoQCC4QsQMQgwEQxwEQ0QMQQzoKCC4QsQMQ1AIQQzoICC4QgAQQsQM6CAgAELEDEIMBSgQIQRgASgQIRhgBUNsIWPMRYIwUaANwAXgAgAGNAogBnw2SAQMyLTeYAQCgAQHIARPAAQHaAQYIARABGAnaAQYIAhABGAg&sclient=gws-wiz");
+                      }
+                      else if( x==="Puff")
+                      {
+                        window.open("https://www.google.com/search?q=puff&client=opera&hs=kfc&sxsrf=ALiCzsa54wZLvgTk4FKRwwFp29bBPMYIOw%3A1663344868211&ei=5KAkY7PHDICN4-EPnJWP8A8&ved=0ahUKEwizyYjA2pn6AhWAxjgGHZzKA_4Q4dUDCA0&uact=5&oq=puff&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEJECMgoIABCxAxCDARBDMgcIABCxAxBDMggILhCxAxCRAjIICAAQgAQQsQMyCAgAELEDEIMBMggIABCxAxCDATIICAAQsQMQgwEyCAgAELEDEIMBMggIABCABBCxAzoKCAAQRxDWBBCwAzoHCAAQsAMQQzoNCAAQ5AIQ1gQQsAMYAToSCC4QxwEQ0QMQyAMQsAMQQxgCOgwILhDIAxCwAxBDGAI6DwguENQCEMgDELADEEMYAjoECCMQJzoLCAAQgAQQsQMQgwE6BwguENQCEEM6BQgAEIAEOgsILhCABBCxAxCDAToICC4QgAQQsQNKBAhBGABKBAhGGAFQ0AVYnQtg1gxoA3ABeACAAZMCiAH-BZIBAzItM5gBAKABAcgBE8ABAdoBBggBEAEYCdoBBggCEAEYCA&sclient=gws-wiz");
+                      }
+                      else if(x==="Danny's Place")
+                      {
+                        window.open("http://127.0.0.1:5500/newdanny.html");
+                      }
+                      else if(x=== "Yogi Canteen")
+                      {
+                        window.open("http://127.0.0.1:5500/newyogi.html");
+                      }
+
+                      else if(x=== "Ice-berg")
+                      {
+                        window.open("http://127.0.0.1:5500/newIce-berg.html");
+                      }
+
+                      else if(x=== "Sweet-Spot")
+                      {
+                        window.open("http://127.0.0.1:5500/sweetspot.html");
+                      }
+
+                      
+
+
+                      
+                  }
+              </script>
+              <button> </button>
+              <input type="submit" > 
+              </div>
+            </a>
+        </nav>
+    
+    </header>
+
+    <script>
+        var countries = ["Burger","Sandwich","Frankie","Puff","Thali","Shreeji Canteen","Yogi Canteen","Danny's Place","Ice-berg","Wagh- Bakri","Sweet-Spot"];
+
+       function autocomplete(inp, arr) {
+ /*the autocomplete function takes two arguments,
+ the text field element and an array of possible autocompleted values:*/
+ var currentFocus;
+ /*execute a function when someone writes in the text field:*/
+ inp.addEventListener("input", function(e) {
+     var a, b, i, val = this.value;
+     /*close any already open lists of autocompleted values*/
+     closeAllLists();
+     if (!val) { return false;}
+     currentFocus = -1;
+     /*create a DIV element that will contain the items (values):*/
+     a = document.createElement("DIV");
+     a.setAttribute("id", this.id + "autocomplete-list");
+     a.setAttribute("class", "autocomplete-items");
+     /*append the DIV element as a child of the autocomplete container:*/
+     this.parentNode.appendChild(a);
+     /*for each item in the array...*/
+     for (i = 0; i < arr.length; i++) {
+       /*check if the item starts with the same letters as the text field value:*/
+       if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+         /*create a DIV element for each matching element:*/
+         b = document.createElement("DIV");
+         /*make the matching letters bold:*/
+         b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+         b.innerHTML += arr[i].substr(val.length);
+         /*insert a input field that will hold the current array item's value:*/
+         b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+         /*execute a function when someone clicks on the item value (DIV element):*/
+             b.addEventListener("click", function(e) {
+             /*insert the value for the autocomplete text field:*/
+             inp.value = this.getElementsByTagName("input")[0].value;
+             /*close the list of autocompleted values,
+             (or any other open lists of autocompleted values:*/
+             closeAllLists();
+         });
+         a.appendChild(b);
+       }
+     }
+ }
+ );
+ /*execute a function presses a key on the keyboard:*/
+ inp.addEventListener("keydown", function(e) {
+     var x = document.getElementById(this.id + "autocomplete-list");
+     if (x) x = x.getElementsByTagName("div");
+     if (e.keyCode == 40) {
+       /*If the arrow DOWN key is pressed,
+       increase the currentFocus variable:*/
+       currentFocus++;
+       /*and and make the current item more visible:*/
+       addActive(x);
+     } else if (e.keyCode == 38) { //up
+       /*If the arrow UP key is pressed,
+       decrease the currentFocus variable:*/
+       currentFocus--;
+       /*and and make the current item more visible:*/
+       addActive(x);
+     } else if (e.keyCode == 13) {
+       /*If the ENTER key is pressed, prevent the form from being submitted,*/
+       e.preventDefault();
+       if (currentFocus > -1) {
+         /*and simulate a click on the "active" item:*/
+         if (x) x[currentFocus].click();
+       }
+     }
+ });
+ function addActive(x) {
+   /*a function to classify an item as "active":*/
+   if (!x) return false;
+   /*start by removing the "active" class on all items:*/
+   removeActive(x);
+   if (currentFocus >= x.length) currentFocus = 0;
+   if (currentFocus < 0) currentFocus = (x.length - 1);
+   /*add class "autocomplete-active":*/
+   x[currentFocus].classList.add("autocomplete-active");
+ }
+ function removeActive(x) {
+   /*a function to remove the "active" class from all autocomplete items:*/
+   for (var i = 0; i < x.length; i++) {
+     x[i].classList.remove("autocomplete-active");
+   }
+ }
+ function closeAllLists(elmnt) {
+   /*close all autocomplete lists in the document,
+   except the one passed as an argument:*/
+   var x = document.getElementsByClassName("autocomplete-items");
+   for (var i = 0; i < x.length; i++) {
+     if (elmnt != x[i] && elmnt != inp) {
+     x[i].parentNode.removeChild(x[i]);
+   }
+ }
+}
+/*execute a function when someone clicks in the document:*/
+document.addEventListener("click", function (e) {
+   closeAllLists(e.target);
+});
+}
+   </script>
+<script>
+   autocomplete(document.getElementById("myInput"), countries);
+</script>
+
+<section class="home" id="home">
+<img src="allfood.jpg" alt="Paris" style="width:100%;">
+</section>
+
+<section class="speciality" id="speciality">
+
+    <h1 class="heading"> Canteen's Inside Campus </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <a target="_blank" href="newyogi.html">
+            <img class="image" src="yogi/sandwich.jpg" alt="">
+            </a>
+            <div class="content">
+                
+                <h3>Yogi Canteen</h3>
+                <p>Situated near girls mess, opposite of PDPIAS</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img class="image" src="Shreeji.jpg" alt="">
+            <div class="content">
+                
+                <h3>Shreeji Canteen</h3>
+                <p>Situated near lake, opposite of Sports Ground.</p>
+               
+            </div>
+        </div>
+        <div class="box">
+            <a target="_blank" href="newIce-berg.html">
+            <img class="image" src="ice-berg/IMG_20221012_004551.jpg " alt="">
+            </a>
+            <div class="content">
+             
+                
+                </a>
+                <h3>Ice-Berg</h3>
+                <p>Situated Right of back entrance behind PDPIAS, Near parking.</p>
+
+               
+            </div>
+        </div>
+        <div class="box">
+            <a target="_blank" href="newdanny.html">
+            <img class="image" src="danny/IMG_20221012_004440.jpg" alt="">
+            </a>
+            <div class="content">
+                
+                
+                <h3>Danny's</h3>
+                <p>Situated left of back entrance behind Depstar, Near parking.</p>
+               
+            </div>
+        </div>
+        <div class="box">
+            <a target="_blank" href="sweetspot.html">
+            <img class="image" src="sweet-spot/kathi-roll-recipe-500x500.jpg" alt="">
+            </a>
+            <div class="content">
+                
+                <h3>Sweet spot</h3>
+                <p>Situated left of back entrance behind Depstar, Opposite of Danny's.</p>
+            </div>
+        </div>
+        <div class="box">
+            
+            <img class="image" src="wagh-bakri.jpg" alt="">
+            <div class="content">
+                
+                <h3>Wagh-Bakri</h3>
+                <p>Situated behind IIIM, left of Volley ball groung.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="gallery" id="gallery">
+
+    <h1 class="heading"> our food <span> gallery </span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="yogi/Schezwan-Puff-1.png.webp" alt="">
+            <div class="content">
+                <h3>Yogi Canteen</h3>
+                <p>Taste the Food-ASH's choice </p>
+                <a href="#" class="btn">ordern now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="yogi/t-mcdonalds-Cheeseburger-1_1-3-product-tile-desktop.jpg" alt="">
+            <div class="content">
+                <h3>Yogi Canteen</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                <a href="#" class="btn">ordern now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="ice-berg/IMG_20221012_004539.jpg" alt="">
+            <div class="content">
+                <h3>Ice- Berg</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                <a href="#" class="btn">ordern now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="danny/IMG_20221012_004428.jpg" alt="">
+            <div class="content">
+                <h3>Danny's Cafe</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                <a href="#" class="btn">ordern now</a>
+            </div>
+        </div>
+       
+        
+
+    </div>
+
+</section>
+
+
+</body>
+</html>
